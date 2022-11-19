@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Wordki.pl';
+  show: boolean = true;
+
+  submit() {}
+
+
 }

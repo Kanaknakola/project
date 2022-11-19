@@ -2,4 +2,53 @@
   <header>
     <h1>{{ title }} - nauka słówek</h1>
   </header>
+  <nav>
+    <div class="nav">
+      <div class="nav_box">
+        <form class="example-form">    
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>Słownik Polsko - {{ test3.value }}</mat-label>
+              <input matInput>
+            </mat-form-field></td>
+          </tr></table>
+        </form>
+      </div>
+      <div class="nav_box">
+        <mat-form-field appearance="fill">
+          <mat-label>Wybierz język nauki</mat-label>
+          <select matNativeControl required #test3>
+            <option value="Angielski">Angielski</option>
+            <option value="Niemiecki">Niemiecki</option>
+            <option value="Francuski">Francuski</option>
+            <option value="Hiszpański">Hiszpański</option>
+            <option value="Włoski">Włoski</option>
+          </select>
+        </mat-form-field>
+      </div>
+      <div class="nav_box">
+        <button mat-raised-button color="primary">Wszystkie zestawy</button>
+        <button mat-raised-button color="primary">Moje zestawy</button>
+      </div>
+      <div class="nav_box">
+        <button mat-stroked-button color="primary">Pomoc</button>
+      </div>
+      <div class="nav_box">
+        <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Login</mat-label>
+        <input #test1 matInput placeholder="Enter your name" name="usename">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Hasło</mat-label>
+        <input #test2 matInput placeholder="Enter your password" value="" name="password" type="password" >
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="submit()" [disabled]="this.test1.value === '' ||
+         this.test2.value === ''">Zaloguj</button>
+        <span *ngIf="!show"> <button mat-button color="accent">Login success !!</button></span>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
 </div>
