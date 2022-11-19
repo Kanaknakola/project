@@ -3,6 +3,10 @@
     padding: 50px;
     background-color: #fff;
 }
+h1 {
+    color: #3f51b5;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -17,4 +21,7 @@
 form {
     flex-direction: column;
     display: flex;
+}
+::ng-deep .cdk-overlay-container {
+    top: 45px;
 }
