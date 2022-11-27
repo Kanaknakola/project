@@ -1,4 +1,27 @@
 .container {
     max-width: 2560px;
     padding: 50px;
+    background-color: #fff;
+}
+h1 {
+    color: #3f51b5;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form {
+    flex-direction: column;
+    display: flex;
+}
+::ng-deep .cdk-overlay-container {
+    top: 45px;
 }
